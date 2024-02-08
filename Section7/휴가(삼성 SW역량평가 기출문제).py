@@ -1,32 +1,29 @@
 import sys
-sys.stdin=open("/Users/kimdoyeon/Desktop/pythonalgorithm_formac/섹션 7/2. 휴가/in2.txt")
+sys.stdin=open("/Users/kimdoyeon/Desktop/pythonalgorithm_formac/섹션 7/2. 휴가/in5.txt")
 
 
-def DFS(L,m,t):
-    global money_sum
-    if t>N:
+def DFS(d,m):
+    global money_max
+    if d>N+1:
         return
-    elif t<=N:
-        if m>money_sum:
-            money_sum=m
-            print(money_sum)
-        for i in range(N):
-            if ch[i]==0:
-                k=money[i]
-                ch[:k]==1
-                DFS(L+1,m+money[i],t+time[i])
-                ch[:k]=0
-    
+    if d==N+1:
+        if money_max<m:
+            money_max=m
+    else:
+        DFS(d+time[d],m+money[d])
+        DFS(d+1,m)
     
 if __name__=="__main__":
     N=int(input())
     time=[]
     money=[]
+    time.append(0)
+    money.append(0)
     for _ in range(N):
         a,b=map(int,input().split())
         time.append(a)
         money.append(b)
-    ch=[0]*(N+1)
-    money_sum=-2174000000
-    DFS(0,0,0)
-    print(money_sum)
+
+    money_max=-2174000000
+    DFS(1,0)
+    print(money_max)

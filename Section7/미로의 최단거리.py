@@ -17,6 +17,7 @@ while dQ:
         x=dx[i]+tmp[0]
         y=dy[i]+tmp[1]
         if   0<=x<7 and 0<=y<7 and a[x][y]==0 and ch[x][y]==0:
+            a[x][y]=1
             ch[x][y]+=ch[tmp[0]][tmp[1]]+1
             dQ.append((x,y))
 

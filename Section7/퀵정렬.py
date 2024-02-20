@@ -7,9 +7,9 @@ def Qsort(lt,rt):
                 arr[i],arr[pos]=arr[pos],arr[i]
                 pos+=1
         arr[pos],arr[rt]=arr[rt],arr[pos]
-        return
-    Qsort(lt,pos-1)
-    Qsort(pos+1,rt)
+
+        Qsort(lt,pos-1)
+        Qsort(pos+1,rt)
 
 if __name__=="__main__":
     arr=[23,41,23,1,234,533,231,10]

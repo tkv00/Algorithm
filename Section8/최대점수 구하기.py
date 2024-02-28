@@ -11,3 +11,4 @@ for i in range(n):
     for j in range(m,a[i][1]-1,-1):
         dp[j]=max(dp[j],a[i][0]+dp[j-a[i][1]])
 print(dp[m])
+# 뒤에서 부터 갱신하면서 이전의 dp값에서 더한다.

@@ -1,4 +1,4 @@
-<h2 align="center">나의 알고리즘 공부연습장<h2/>
+<h2 align="center">나의 알고리즘 공부연습장(python)<h2/>
 <hr/>
 <br/>
 

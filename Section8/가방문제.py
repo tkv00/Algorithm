@@ -1,5 +1,5 @@
-import sys
-sys.stdin=open("/Users/kimdoyeon/Desktop/pythonalgorithm_formac/섹션 8/9. 가방문제/in5.txt")
+# import sys
+# sys.stdin=open("/Users/kimdoyeon/Desktop/pythonalgorithm_formac/섹션 8/9. 가방문제/in5.txt")
 
 if __name__=="__main__":
     num,weight=map(int,input().split())

@@ -1,0 +1,1 @@
+let res=result(numA,numB);
